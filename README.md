@@ -12,9 +12,9 @@ e htmx/alpine.js, no entanto, o objetivo não é usar vue.js ou react
 
 ### Tasks
 - [x] Ler README
-- [ ] frontend
-- [ ] backend
-- [ ] fullstack
+- [x] frontend
+- [x] backend
+- [x] fullstack
 
 ## &#10067; Ajuda
 ### Pre-requirements:
@@ -32,6 +32,12 @@ e htmx/alpine.js, no entanto, o objetivo não é usar vue.js ou react
 ### Tutoriais, guias e mini cursos
 
 #### Django
+- <strong>**Introdução**</strong>: https://www.codecademy.com/learn/introduction-to-django/modules/introduction-to-django/cheatsheet
+- <strong>**Forms**</strong>: https://www.codecademy.com/learn/forms-in-django/modules/django-forms/cheatsheet
+- <strong>**Templates**</strong>: https://www.codecademy.com/learn/templates-in-django/modules/django-templates/cheatsheet
+- <strong>**Auth**</strong>: https://www.codecademy.com/learn/accounts-and-authentication-in-django/modules/django-accounts-and-authentication/cheatsheet
+- <strong>**Views**</strong>: https://www.codecademy.com/learn/views-in-django/modules/django-writing-more-views/cheatsheet
+- <strong>**Models (Data)**</strong>: https://www.codecademy.com/learn/data-in-django/modules/django-models-and-databases/cheatsheet
 - https://www.youtube.com/watch?v=0sMtoedWaf0
 - https://learn.microsoft.com/pt-pt/training/paths/django-create-data-driven-websites/
 - https://www.w3schools.com/django/django_intro.php

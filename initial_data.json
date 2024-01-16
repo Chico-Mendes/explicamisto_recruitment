@@ -1,0 +1,70 @@
+[
+    {
+        "model": "website.Person",
+        "pk": 1,
+        "fields": {
+            "name": "Beatriz Heleno"
+        }
+    },
+    {
+        "model": "website.Person",
+        "pk": 2,
+        "fields": {
+            "name": "Lívia Ripcke"
+        }
+    },
+    {
+        "model": "website.Person",
+        "pk": 3,
+        "fields": {
+            "name": "Diogo Almeida"
+        }
+    },
+    {
+        "model": "website.Person",
+        "pk": 4,
+        "fields": {
+            "name": "Nádia"
+        }
+    },
+    {
+        "model": "website.Testemunho",
+        "pk": 1,
+        "fields": {
+            "text": "O ExplicaMisto foi importante na minha carreira de estudante porque me ajudou de forma simpática e prestável.",
+            "occupation": "Explicanda",
+            "year": "20/21",
+            "user": 1
+        }
+    },
+    {
+        "model": "website.Testemunho",
+        "pk": 2,
+        "fields": {
+            "text": "O ExplicaMisto me ajudou muito, pois para pessoas que não têm condições de ter explicações é uma ajuda no estudo e na confiança.",
+            "user": 2,
+            "occupation": "Explicanda",
+            "year": "21/22"
+        }
+    },
+    {
+        "model": "website.Testemunho",
+        "pk": 3,
+        "fields": {
+            "text": "Este projeto deu-me motivação para ensinar de uma forma melhor e esforçar-me para aprender também melhores formas de chegar às pessoas. Em geral foi uma experiência enriquecedora, com muito humanismo por detrás e é um projeto nobre que espero poder continuar a fazer parte e apoiar no futuro.",
+            "user": 3,
+            "occupation": "Explicador",
+            "year": "22/23"
+        }
+    },
+    {
+        "model": "website.Testemunho",
+        "pk": 4,
+        "fields": {
+            "text": "Infelizmente, vemos cada vez mais as pessoas comuns a terem menos possibilidades, tempo, e mais importante, o dinheiro para pagar explicações. Atualmente, isso é visto como luxo; ou seja, é luxo hoje em dia querer estudar e subir cada vez mais como pessoa culta ou informada. Então, acredito que o projeto tem asas para crescer mais do que já cresceu, e tem muito potencial porque todos os anos há novos e novos universitários a quererem fazer o bem.",
+            "user": 4,
+            "occupation": "Explicadora",
+            "year": "22/23"
+        }
+    }
+]
