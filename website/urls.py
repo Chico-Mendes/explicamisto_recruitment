@@ -7,6 +7,6 @@ urlpatterns = [
     path(
         "api/testemunhos/",
         TestemunhoListCreateView.as_view(),
-        name="testemunho-list-create",
+        name="api-testemunhos",
     ),
 ]

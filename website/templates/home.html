@@ -2,75 +2,97 @@
 {% load static %}
 
 {% block title %}
-  ExplicaMisto
+ExplicaMisto
 {% endblock %}
 
 {% block content %}
-  <section id="testemunhos">
-    <div class="container py-4 mb-5">
-      <div class="row mb-2">
-        <div class="col-md-8 col-xl-6 text-center mx-auto">
-          <h2 class="fw-bold mt-3 text-center"><span style="color: rgb(82, 157, 255);">Testemunhos</span></h2>
+<section id="testemunhos">
+  <div class="container py-4 mb-5">
+    <div class="row mb-2">
+      <div class="col-md-8 col-xl-6 text-center mx-auto">
+        <h2 class="fw-bold mt-3 text-center"><span style="color: rgb(82, 157, 255);">Testemunhos</span></h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="input-group">
+          <span class="input-group-text">Filtros:</span>
+          <button class="btn btn-outline-secondary dropdown-toggle bs5-m" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false"></button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-4" id="testemunhos-col1"></div>
-        <div class="col-md-4" id="testemunhos-col2"></div>
-      </div>
+
     </div>
-  </section>
+    <div class="row justify-content-center">
+      <div class="col-md-4" id="testemunhos-col1"></div>
+      <div class="col-md-4" id="testemunhos-col2"></div>
+    </div>
+  </div>
+</section>
 
-  <section id="add-testemunho">
-    <div class="container mb-5" style="width: 50vw; min-width: 425px;">
-      <h2 class="fw-bold mt-3 text-center"><span style="color: rgb(82, 157, 255);">Adicionar um testemunho</span></h2>
-      <div id="t-formContainer" class="container bg-info bg-opacity-10 text-center p-3" style="border-radius: 20px; border-style: solid; border-color: silver; border-width: thin;">
-        <form id="t-form" class="needs-validation text-start" novalidate>
-          <div class="mb-3">
-            <div class="form-floating">
-              <input type="text" class="form-control" id="t-username" placeholder="Nome" required />
-              <div class="invalid-feedback">Escreva o seu nome!</div>
-              <label for="t-username">Nome</label>
+<section id="add-testemunho">
+  <div class="container mb-5" style="width: 50vw; min-width: 425px;">
+    <h2 class="fw-bold mt-3 text-center"><span style="color: rgb(82, 157, 255);">Adicionar um testemunho</span></h2>
+    <div id="t-formContainer" class="container bg-info bg-opacity-10 text-center p-3"
+      style="border-radius: 20px; border-style: solid; border-color: silver; border-width: thin;">
+      <form id="t-form" class="needs-validation text-start" novalidate>
+        <div class="mb-3">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="t-username" placeholder="Nome" required />
+            <div class="invalid-feedback">Escreva o seu nome!</div>
+            <label for="t-username">Nome</label>
+          </div>
+
+          <div id="t-row" class="row mt-2">
+            <div class="col">
+              <label for="t-occupation" class="form-label">Ocupação:</label>
+              <select id="t-occupation" class="form-select" required aria-label="select occupation">
+                <option value="">Seleciona uma ocupação</option>
+                {% for occupation in occupations %}
+                {# prettier-ignore #}
+                <option value="{{ occupation.0 }}">{{ occupation.1 }}</option>
+                {% endfor %}
+              </select>
+              <div class="invalid-feedback">Selecione uma ocupação!</div>
             </div>
 
-            <div id="t-row" class="row mt-2">
-              <div class="col">
-                <label for="t-occupation" class="form-label">Ocupação:</label>
-                <select id="t-occupation" class="form-select" required aria-label="select occupation">
-                  <option value="">Seleciona uma ocupação</option>
-                  {% for occupation in occupations %}
-                    {# prettier-ignore #}
-                    <option value="{{ occupation.0 }}">{{ occupation.1 }}</option>
-                  {% endfor %}
-                </select>
-                <div class="invalid-feedback">Selecione uma ocupação!</div>
-              </div>
-
-              <div class="col" style="width: fit-content; flex: none;">
-                <label for="t-year" class="form-label">Ano:</label>
-                <input id="t-year" type="text" class="form-control" placeholder="YY/YY" maxlength="5" style="width: 6.5em;flex: none;" required />
-                <div class="invalid-feedback">Obrigatório!</div>
-              </div>
-            </div>
-
-            <div class="my-2">
-              <label for="t-testemunho" class="form-label">Testemunho:</label>
-              <textarea class="form-control" id="t-testemunho" rows="5" required></textarea>
+            <div class="col" style="width: fit-content; flex: none;">
+              <label for="t-year" class="form-label">Ano:</label>
+              <input id="t-year" type="text" class="form-control" placeholder="YY/YY" maxlength="5"
+                style="width: 6.5em;flex: none;" required />
+              <div class="invalid-feedback">Obrigatório!</div>
             </div>
           </div>
 
-          <div class="d-flex justify-content-center mt-2">
-            <button id="t-submitBtn" class="btn btn-primary" type="submit">Submeter</button>
+          <div class="my-2">
+            <label for="t-testemunho" class="form-label">Testemunho:</label>
+            <textarea class="form-control" id="t-testemunho" rows="5" required></textarea>
           </div>
-        </form>
-      </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-2">
+          <button id="t-submitBtn" class="btn btn-primary" type="submit">Submeter</button>
+        </div>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
 {% endblock %}
 
 {% block scripts %}
-  {{ listTestemunhos|json_script:'listTestemunhos' }}
-  <script>
-    const img_src = "{% static 'website/images/anon_person.jpg' %}"
-  </script>
-  <script src="{% static 'website/js/website.js' %}"></script>
+{{ listTestemunhos|json_script:'listTestemunhos' }}
+<script>
+  const img_src = "{% static 'website/images/anon_person.jpg' %}"
+</script>
+<script src="{% static 'website/js/website.js' %}"></script>
 {% endblock %}

@@ -53,7 +53,7 @@ e htmx/alpine.js, no entanto, o objetivo não é usar vue.js ou react
 - https://www.codecademy.com/learn/learn-html
 - https://www.codecademy.com/learn/learn-css
 - https://www.codecademy.com/learn/introduction-to-javascript
-- https://getbootstrap.com/docs/5.2/getting-started/introduction/ [Bootstrap (JavaScript)]
+- https://getbootstrap.com/docs/5.3/getting-started/introduction/ [Bootstrap (JavaScript)]
 
 #### GitHub
 - https://www.youtube.com/watch?v=JRqOQe6U2M4&list=PL9yeXkcwapxuKBzr39mLyyt3T0gzmfdx5&index=2
